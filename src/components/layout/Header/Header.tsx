@@ -1,17 +1,17 @@
-import { useCallback, useContext, useState } from 'react'
-import cx from 'classnames'
+import { useContext } from 'react' // useCallback, useState
+// import cx from 'classnames'
 
 import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
 import { StateContext } from '@/state'
-import { Icon } from '@/components/kit'
+// import { Icon } from '@/components/kit'
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  // const [setIsMenuOpen] = useState(false) // isMenuOpen,
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(state => !state)
-  }, [])
+  // const toggleMenu = useCallback(() => {
+  //   setIsMenuOpen(state => !state)
+  // }, [])
 
   const { openMobileMenu } = useContext(StateContext)
 
@@ -21,7 +21,7 @@ function Header() {
         <img src="/images/logo_norm.svg" alt="White" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
           <strong>White protocol</strong>
-          {/*<div>Group cross-chain transfer</div>*/}
+          {/* <div>Group cross-chain transfer</div> */}
         </div>
       </div>
 
